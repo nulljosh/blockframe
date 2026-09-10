@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import {
   createGrid, cloneGrid, gridToText, textToGrid,
-  stampComponent, setChar, eraseRegion, pxToCell,
+  stampComponent, setChar, eraseRegion, pxToCell, renderElements,
   createState, pushHistory, undo, redo,
   DEFAULT_COLS, DEFAULT_ROWS,
 } from './engine.js';
@@ -136,7 +136,8 @@ describe('undo / redo', () => {
   it('undo reverts to previous grid state', () => {
     let s = createState(5, 5);
     s = pushHistory(s);
-    s = { ...s, grid: setChar(s.grid, 0, 0, 'Z') };
+    s = { ...s, elements: [{ id: 'e1', template: ['Z'], width: 1, height: 1, col: 0, row: 0 }] };
+    s = { ...s, grid: renderElements(s.elements, s.cols, s.rows) };
     const reverted = undo(s);
     expect(reverted.grid[0][0]).toBe(' ');
   });
@@ -144,7 +145,8 @@ describe('undo / redo', () => {
   it('redo reapplies undone change', () => {
     let s = createState(5, 5);
     s = pushHistory(s);
-    s = { ...s, grid: setChar(s.grid, 0, 0, 'Z') };
+    s = { ...s, elements: [{ id: 'e1', template: ['Z'], width: 1, height: 1, col: 0, row: 0 }] };
+    s = { ...s, grid: renderElements(s.elements, s.cols, s.rows) };
     s = undo(s);
     s = redo(s);
     expect(s.grid[0][0]).toBe('Z');

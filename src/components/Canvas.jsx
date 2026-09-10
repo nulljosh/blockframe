@@ -1,6 +1,6 @@
 import { useRef, useEffect, useCallback } from 'react';
 import './Canvas.css';
-import { pxToCell, stampComponent } from '../lib/engine.js';
+import { pxToCell, stampComponent, elementAt } from '../lib/engine.js';
 
 const FONT_SIZE = 14;
 // ponytail: the canvas is a character grid, so monospace is correct here and
@@ -27,15 +27,23 @@ export default function Canvas({
   rows,
   cursor,
   selectedPreset,
+  elements = [],
+  selectedId = null,
   darkMode,
   onPlaceComponent,
   onCursorMove,
+  onSelectElement,
+  onMoveElement,
+  onDeleteElement,
   onUndo,
   onRedo,
 }) {
   const canvasRef = useRef(null);
   const charWRef = useRef(null);
   const hoverRef = useRef(null);
+  const dragRef = useRef(null); // { id, startCol, startRow, offCol, offRow } while dragging
+
+  const selectedEl = elements.find(el => el.id === selectedId) || null;
 
   function getCharW() {
     if (!charWRef.current) {
@@ -90,12 +98,41 @@ export default function Canvas({
       }
     }
 
-    const cx = cursor.col * charW;
-    const cy = cursor.row * charH;
-    ctx.strokeStyle = token('--accent', '#ffca30');
-    ctx.lineWidth = 2;
-    ctx.strokeRect(cx + 0.5, cy + 0.5, charW - 1, charH - 1);
-  }, [grid, cols, rows, cursor, selectedPreset, darkMode]);
+    // Selection box around the selected element (or its live drag position).
+    if (selectedEl) {
+      const drag = dragRef.current;
+      const dcol = drag && drag.id === selectedEl.id ? drag.col : selectedEl.col;
+      const drow = drag && drag.id === selectedEl.id ? drag.row : selectedEl.row;
+      ctx.strokeStyle = token('--accent', '#ffca30');
+      ctx.lineWidth = 2;
+      ctx.strokeRect(
+        dcol * charW - 1.5,
+        drow * charH - 1.5,
+        selectedEl.width * charW + 3,
+        selectedEl.height * charH + 3,
+      );
+      // Redraw the element's own glyphs at the drag position so it visibly follows the cursor.
+      if (drag && drag.id === selectedEl.id) {
+        ctx.font = `${FONT_SIZE}px ${FONT_FAMILY()}`;
+        ctx.fillStyle = token('--color-text', '#000000');
+        for (let dy = 0; dy < selectedEl.template.length; dy++) {
+          const chars = [...selectedEl.template[dy]];
+          for (let dx = 0; dx < chars.length; dx++) {
+            if (chars[dx] === ' ') continue;
+            ctx.fillText(chars[dx], (dcol + dx) * charW, (drow + dy) * charH + FONT_SIZE);
+          }
+        }
+      }
+    }
+
+    if (!selectedPreset) {
+      const cx = cursor.col * charW;
+      const cy = cursor.row * charH;
+      ctx.strokeStyle = token('--color-hairline', 'rgba(0,0,0,0.3)');
+      ctx.lineWidth = 1;
+      ctx.strokeRect(cx + 0.5, cy + 0.5, charW - 1, charH - 1);
+    }
+  }, [grid, cols, rows, cursor, selectedPreset, selectedEl, darkMode]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -129,6 +166,11 @@ export default function Canvas({
     const cell = getCellFromEvent(e);
     hoverRef.current = cell;
     onCursorMove(cell.col, cell.row);
+    const drag = dragRef.current;
+    if (drag) {
+      drag.col = cell.col - drag.offCol;
+      drag.row = cell.row - drag.offRow;
+    }
     draw(cell);
   }, [getCellFromEvent, onCursorMove, draw]);
 
@@ -136,6 +178,29 @@ export default function Canvas({
     hoverRef.current = null;
     draw(null);
   }, [draw]);
+
+  const handleMouseDown = useCallback((e) => {
+    if (selectedPreset) return; // placing, not selecting/dragging
+    const cell = getCellFromEvent(e);
+    const el = elementAt(elements, cell.col, cell.row);
+    if (el) {
+      onSelectElement(el.id);
+      dragRef.current = { id: el.id, offCol: cell.col - el.col, offRow: cell.row - el.row, col: el.col, row: el.row };
+    } else {
+      onSelectElement(null);
+    }
+  }, [selectedPreset, getCellFromEvent, elements, onSelectElement]);
+
+  const handleMouseUp = useCallback(() => {
+    const drag = dragRef.current;
+    if (drag && (drag.col !== undefined)) {
+      const el = elements.find(x => x.id === drag.id);
+      if (el && (drag.col !== el.col || drag.row !== el.row)) {
+        onMoveElement(drag.id, drag.col, drag.row);
+      }
+    }
+    dragRef.current = null;
+  }, [elements, onMoveElement]);
 
   const handleClick = useCallback((e) => {
     const cell = getCellFromEvent(e);
@@ -163,7 +228,11 @@ export default function Canvas({
       e.preventDefault();
       onRedo();
     }
-  }, [onUndo, onRedo]);
+    if ((e.key === 'Delete' || e.key === 'Backspace') && selectedId) {
+      e.preventDefault();
+      onDeleteElement(selectedId);
+    }
+  }, [onUndo, onRedo, selectedId, onDeleteElement]);
 
   return (
     <div className="canvas-wrapper" onKeyDown={handleKeyDown} tabIndex={0}>
@@ -171,7 +240,9 @@ export default function Canvas({
         <canvas
           ref={canvasRef}
           className={`canvas${selectedPreset ? ' canvas--place-mode' : ''}`}
+          onMouseDown={handleMouseDown}
           onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseLeave}
           onClick={handleClick}
           onTouchEnd={handleTouchEnd}

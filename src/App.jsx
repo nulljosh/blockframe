@@ -3,7 +3,10 @@ import './App.css';
 import Toolbar from './components/Toolbar.jsx';
 import Canvas from './components/Canvas.jsx';
 import Inspector from './components/Inspector.jsx';
-import { createState, undo, redo, pushHistory, stampComponent, gridToText } from './lib/engine.js';
+import {
+  createState, undo, redo, pushHistory, gridToText,
+  createElement, renderElements, moveElement, deleteElement,
+} from './lib/engine.js';
 import { useWebMCP } from './lib/webmcp.js';
 
 function reducer(state, action) {
@@ -14,10 +17,34 @@ function reducer(state, action) {
     case 'PLACE_COMPONENT': {
       const { preset, col, row } = action;
       const withHistory = pushHistory(state);
+      const elements = [...withHistory.elements, createElement(preset, col, row)];
       return {
         ...withHistory,
-        grid: stampComponent(withHistory.grid, preset.template, col, row),
+        elements,
+        grid: renderElements(elements, state.cols, state.rows),
         selectedPreset: null,
+        selectedId: null,
+      };
+    }
+
+    case 'SELECT_ELEMENT':
+      return { ...state, selectedId: action.id, selectedPreset: null };
+
+    case 'MOVE_ELEMENT': {
+      const { id, col, row } = action;
+      const withHistory = pushHistory(state);
+      const elements = moveElement(withHistory.elements, id, col, row);
+      return { ...withHistory, elements, grid: renderElements(elements, state.cols, state.rows) };
+    }
+
+    case 'DELETE_ELEMENT': {
+      const withHistory = pushHistory(state);
+      const elements = deleteElement(withHistory.elements, action.id);
+      return {
+        ...withHistory,
+        elements,
+        grid: renderElements(elements, state.cols, state.rows),
+        selectedId: null,
       };
     }
 
@@ -32,12 +59,12 @@ function reducer(state, action) {
 
     case 'CLEAR': {
       const withHistory = pushHistory(state);
-      return { ...withHistory, grid: createState(withHistory.cols, withHistory.rows).grid };
+      return { ...withHistory, elements: [], grid: createState(withHistory.cols, withHistory.rows).grid, selectedId: null };
     }
 
     case 'SET_GRID': {
       const withHistory = pushHistory(state);
-      return { ...withHistory, grid: action.grid };
+      return { ...withHistory, grid: action.grid, elements: [], selectedId: null };
     }
 
     default:
@@ -113,6 +140,10 @@ export default function App() {
   }, []);
 
   useWebMCP({ state, dispatch });
+
+  const handleSelectElement = useCallback((id) => dispatch({ type: 'SELECT_ELEMENT', id }), []);
+  const handleMoveElement = useCallback((id, col, row) => dispatch({ type: 'MOVE_ELEMENT', id, col, row }), []);
+  const handleDeleteElement = useCallback((id) => dispatch({ type: 'DELETE_ELEMENT', id }), []);
 
   const handleUndo = useCallback(() => dispatch({ type: 'UNDO' }), []);
   const handleRedo = useCallback(() => dispatch({ type: 'REDO' }), []);
@@ -226,9 +257,14 @@ export default function App() {
         rows={state.rows}
         cursor={state.cursor}
         selectedPreset={state.selectedPreset}
+        elements={state.elements}
+        selectedId={state.selectedId}
         darkMode={darkMode}
         onPlaceComponent={handlePlaceComponent}
         onCursorMove={handleCursorMove}
+        onSelectElement={handleSelectElement}
+        onMoveElement={handleMoveElement}
+        onDeleteElement={handleDeleteElement}
         onUndo={handleUndo}
         onRedo={handleRedo}
       />
@@ -238,6 +274,8 @@ export default function App() {
         cols={state.cols}
         rows={state.rows}
         selectedPreset={state.selectedPreset}
+        selectedElement={state.elements.find(el => el.id === state.selectedId) || null}
+        onDeleteElement={handleDeleteElement}
         historyLength={state.history.length}
         futureLength={state.future.length}
         isOpen={mobileSheet === 'inspector'}

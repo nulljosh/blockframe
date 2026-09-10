@@ -99,13 +99,15 @@ export function createState(cols = DEFAULT_COLS, rows = DEFAULT_ROWS) {
     history: [],
     future: [],
     selectedPreset: null,
+    elements: [],
+    selectedId: null,
   };
 }
 
 export function pushHistory(state) {
   return {
     ...state,
-    history: [...state.history.slice(-49), cloneGrid(state.grid)],
+    history: [...state.history.slice(-49), state.elements],
     future: [],
   };
 }
@@ -115,9 +117,10 @@ export function undo(state) {
   const prev = state.history[state.history.length - 1];
   return {
     ...state,
-    grid: prev,
+    elements: prev,
+    grid: renderElements(prev, state.cols, state.rows),
     history: state.history.slice(0, -1),
-    future: [cloneGrid(state.grid), ...state.future.slice(0, 49)],
+    future: [state.elements, ...state.future.slice(0, 49)],
   };
 }
 
@@ -126,8 +129,53 @@ export function redo(state) {
   const next = state.future[0];
   return {
     ...state,
-    grid: next,
-    history: [...state.history.slice(-49), cloneGrid(state.grid)],
+    elements: next,
+    grid: renderElements(next, state.cols, state.rows),
+    history: [...state.history.slice(-49), state.elements],
     future: state.future.slice(1),
   };
+}
+
+// Elements — placed, selectable, movable objects. `grid` is always their
+// render output; elements are the thing undo/redo, select, and move act on.
+let nextElementId = 1;
+
+export function createElement(preset, col, row) {
+  return {
+    id: `el-${nextElementId++}`,
+    presetId: preset.id,
+    label: preset.label,
+    template: preset.template,
+    width: preset.width,
+    height: preset.height,
+    col,
+    row,
+  };
+}
+
+export function renderElements(elements, cols, rows) {
+  let grid = createGrid(cols, rows);
+  for (const el of elements) {
+    grid = stampComponent(grid, el.template, el.col, el.row);
+  }
+  return grid;
+}
+
+// Topmost element whose bounding box contains (col, row), or null.
+export function elementAt(elements, col, row) {
+  for (let i = elements.length - 1; i >= 0; i--) {
+    const el = elements[i];
+    if (col >= el.col && col < el.col + el.width && row >= el.row && row < el.row + el.height) {
+      return el;
+    }
+  }
+  return null;
+}
+
+export function moveElement(elements, id, col, row) {
+  return elements.map(el => (el.id === id ? { ...el, col, row } : el));
+}
+
+export function deleteElement(elements, id) {
+  return elements.filter(el => el.id !== id);
 }

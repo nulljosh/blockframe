@@ -5,6 +5,8 @@ export default function Inspector({
   cols,
   rows,
   selectedPreset,
+  selectedElement,
+  onDeleteElement,
   historyLength,
   futureLength,
   isOpen,
@@ -53,6 +55,31 @@ export default function Inspector({
             ))}
           </div>
           <div className="inspector-hint">Click canvas to place</div>
+        </section>
+      )}
+
+      {selectedElement && (
+        <section className="inspector-section">
+          <div className="inspector-section-title">Selected</div>
+          <div className="inspector-row">
+            <span className="inspector-key">Name</span>
+            <span className="inspector-value inspector-value--green">{selectedElement.label}</span>
+          </div>
+          <div className="inspector-row">
+            <span className="inspector-key">Position</span>
+            <span className="inspector-value">{selectedElement.col}, {selectedElement.row}</span>
+          </div>
+          <div className="inspector-row">
+            <span className="inspector-key">Size</span>
+            <span className="inspector-value">{selectedElement.width}×{selectedElement.height}</span>
+          </div>
+          <button
+            className="btn"
+            onClick={() => onDeleteElement(selectedElement.id)}
+          >
+            Delete
+          </button>
+          <div className="inspector-hint">Drag to move · Delete/Backspace to remove</div>
         </section>
       )}
     </aside>
