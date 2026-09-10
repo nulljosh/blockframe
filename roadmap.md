@@ -1,5 +1,33 @@
 # Wiretext Roadmap
 
+## Decision 2026-09-10: toward a real canvas editor, not a stamp tool
+
+Direction: move Charwork from "stamp a preset into a fixed char grid" toward something
+closer to Claude Design's canvas editor -- selectable/movable/resizable elements, a
+properties panel, inline text edit, multiple artboards.
+
+**Phase 1 shipped (web only, commit f776d13):** engine.js gained an `elements` array
+(id/position/size/template) that renders into the grid instead of being baked in
+one-way. Click to select, drag to move, Delete/Backspace or Inspector button to
+remove. Undo/redo now snapshots elements, not raw grids.
+
+**Not done yet, in rough order:**
+- [ ] Resize (drag corner/edge handles)
+- [ ] Inline text editing on placed elements (type to relabel, not just position)
+- [ ] Multi-artboard (several canvases on one pan/zoom surface)
+- [ ] Port element model to `ios/App/Engine.swift` (currently still grid-bake only,
+  kept function-for-function with the old `src/lib/engine.js` -- now diverged)
+- [ ] Update `src/lib/webmcp.js` / `src/lib/tools.js` MCP surface if agents need to
+  select/move/delete elements, not just place them
+
+**Naming:** current name "Charwork" doesn't fit a real canvas-editor product as well
+as it fit a wireframe-stamp tool. Candidate: **Formwork** (temporary structure that
+shapes a permanent one -- fits the wireframe-to-real-UI arc). Not yet ASC-probed --
+the throwaway probe record (6783501927) that `asc-name-creator`'s `probe.sh` defaults
+to no longer exists, need a fresh parked app id before checking availability. Do not
+apply until probed; App Store name rejections are exact-match and only found by
+attempting them.
+
 - [ ] Verify iPad layout visually on simulator -- 2026-09-02. Code review found no
   structural iPad issue (full-bleed canvas tool, `TARGETED_DEVICE_FAMILY = "1,2"` already
   set, no NavigationStack/list-detail pattern to convert), but this machine's Xcode only
