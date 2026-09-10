@@ -208,7 +208,7 @@ export default function App() {
       {showTour && (
         <div className="tour-overlay" onClick={dismissTour}>
           <div className="tour-card" onClick={(e) => e.stopPropagation()}>
-            <h2>Welcome to Charwork</h2>
+            <h2>Welcome to Formwork</h2>
             <ol>
               <li>Pick a component from the palette on the left.</li>
               <li>Click anywhere on the canvas to stamp it — hover shows a preview.</li>
@@ -220,7 +220,7 @@ export default function App() {
         </div>
       )}
       <header className="app-header">
-        <span className="app-title">Charwork</span>
+        <span className="app-title">Formwork</span>
 
         {/* Desktop header */}
         <div className="app-header-actions header-desktop">

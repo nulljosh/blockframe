@@ -20,5 +20,5 @@
     "fontFamily": "ui-monospace, 'SF Mono', Monaco, 'Cascadia Code', monospace",
     "uiFontFamily": "-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif"
   },
-  "note": "Warm paper palette, overriding the shared tokens.css in src/index.css (2026-08-28). Charwork matches its own iOS app, not the portfolio. Light + dark, toggled in the header."
+  "note": "Warm paper palette, overriding the shared tokens.css in src/index.css (2026-08-28). Formwork matches its own iOS app, not the portfolio. Light + dark, toggled in the header."
 }

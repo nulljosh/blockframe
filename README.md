@@ -1,6 +1,6 @@
 <img src="icon.svg" width="80" style="border-radius:18px">
 
-# Charwork
+# Formwork
 ![version](https://img.shields.io/badge/version-v1.1.0-blue)
 
 Wireframes made of characters.
@@ -10,7 +10,7 @@ Pick a component. Stamp it on a monospace grid. Copy the result as plain text. I
 ## Screenshots
 
 <p>
-<img src="screenshots/ios/en-US/01-canvas-65.png" width="300" alt="Charwork">
+<img src="screenshots/ios/en-US/01-canvas-65.png" width="300" alt="Formwork">
 </p>
 
 ## Run
@@ -44,7 +44,7 @@ MIT 2026 Joshua Trommel
 
 [wiretext.heyitsmejosh.com](https://wiretext.heyitsmejosh.com)
 
-**Terminal:** `swift build && ./.build/debug/charwork-tui` — see [tui/](tui/)
+**Terminal:** `swift build && ./.build/debug/formwork-tui` — see [tui/](tui/)
 
 ## Whitepaper
 

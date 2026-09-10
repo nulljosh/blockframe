@@ -1,6 +1,13 @@
-# Charwork web
+# Formwork web
 
 v1.1.0, Unicode wireframe tool. Vite + React 19. Warm paper design.
+
+Renamed from Charwork 2026-09-10 (web, docs, GitHub repo). The Xcode project,
+Kotlin package (`com.nulljosh.charwork`), watchOS/TUI targets, live App Store
+Connect record (6794988951), and `charwork.heyitsmejosh.com` DNS still say
+Charwork/Wiretext -- native scheme is still `Charwork-iOS` below. That's a
+separate migration (bundle IDs and ASC name availability aren't a text sweep),
+tracked in `roadmap.md`.
 
 ## Run
 
@@ -26,7 +33,7 @@ grid. Light and dark, toggled in the header (persists as `wiretext-theme` in
 localStorage -- the key predates the rename and changing it would silently reset
 everyone's preference).
 
-Charwork **deliberately does not track the portfolio.** It still imports the shared
+Formwork **deliberately does not track the portfolio.** It still imports the shared
 Jaybulb `tokens.css`, but `src/index.css` overrides the canonical `--color-*` names
 so this app matches its own iOS app instead of the estate's yellow-on-white. That
 override is the one sanctioned exception to the "never shadow the design system"

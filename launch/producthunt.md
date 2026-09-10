@@ -1,6 +1,6 @@
 # Product Hunt
 
-Name: Charwork
+Name: Formwork
 
 Tagline (43): Sketch an interface out of plain characters
 
@@ -13,12 +13,12 @@ Pricing: Free.
 Links
 Web: https://wiretext.heyitsmejosh.com
 App Store: https://apps.apple.com/app/id6794988951
-GitHub: https://github.com/nulljosh/charwork
+GitHub: https://github.com/nulljosh/formwork
 
 ## First comment
 
-Hi, I'm Josh, I built Charwork.
+Hi, I'm Josh, I built Formwork.
 
-Every wireframe tool exports an image nobody can edit in a pull request or a chat. Charwork draws the wireframe out of characters. Pick a component, place it on the grid, copy. It pastes into a README, an issue, a commit message, a Slack thread, and stays editable everywhere. Listed on the App Store as Wiretext.
+Every wireframe tool exports an image nobody can edit in a pull request or a chat. Formwork draws the wireframe out of characters. Pick a component, place it on the grid, copy. It pastes into a README, an issue, a commit message, a Slack thread, and stays editable everywhere. Listed on the App Store as Wiretext.
 
 Free. Happy to answer anything.

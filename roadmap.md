@@ -2,7 +2,7 @@
 
 ## Decision 2026-09-10: toward a real canvas editor, not a stamp tool
 
-Direction: move Charwork from "stamp a preset into a fixed char grid" toward something
+Direction: move Formwork from "stamp a preset into a fixed char grid" toward something
 closer to Claude Design's canvas editor -- selectable/movable/resizable elements, a
 properties panel, inline text edit, multiple artboards.
 
@@ -20,13 +20,13 @@ remove. Undo/redo now snapshots elements, not raw grids.
 - [ ] Update `src/lib/webmcp.js` / `src/lib/tools.js` MCP surface if agents need to
   select/move/delete elements, not just place them
 
-**Naming:** current name "Charwork" doesn't fit a real canvas-editor product as well
-as it fit a wireframe-stamp tool. Candidate: **Formwork** (temporary structure that
-shapes a permanent one -- fits the wireframe-to-real-UI arc). Not yet ASC-probed --
-the throwaway probe record (6783501927) that `asc-name-creator`'s `probe.sh` defaults
-to no longer exists, need a fresh parked app id before checking availability. Do not
-apply until probed; App Store name rejections are exact-match and only found by
-attempting them.
+**Naming, applied 2026-09-10:** renamed Charwork -> **Formwork** everywhere except the
+live App Store Connect record and bundle identifiers (`com.nulljosh.wiretext`). Repo,
+docs, landing page, in-app header/title all say Formwork now. The ASC app record still
+shows "Charwork" (app id 6794988951) -- no throwaway probe record exists to verify
+"Formwork" is available before attempting a live rename (the old dupe, 6783501927, is
+gone, and every other ASC record is a live app, too risky to probe against). Do not
+call `asc apps rename` on 6794988951 until a safe probe confirms availability.
 
 - [ ] Verify iPad layout visually on simulator -- 2026-09-02. Code review found no
   structural iPad issue (full-bleed canvas tool, `TARGETED_DEVICE_FAMILY = "1,2"` already
@@ -99,7 +99,7 @@ Not a gap, `CLAUDE.md` documents this as intentional ("app has no native API nee
 
 ## Decision 2026-08-04
 
-- [ ] Rename wiretext -> **Charwork** (approved 2026-08-04, deliberately parked - "we can work on it later", not urgent). Reason: current name was copied from the source idea. Charwork says what it is (character-grid canvas). Touches: repo name, Cloudflare Pages project, `wiretext.heyitsmejosh.com` DNS, App Store Connect record, in-app title/manifest. Do as one deliberate pass, not a drive-by. Rejected alternatives: Gridling, Plotline.
+- [ ] Rename wiretext -> **Formwork** (approved 2026-08-04, deliberately parked - "we can work on it later", not urgent). Reason: current name was copied from the source idea. Formwork says what it is (character-grid canvas). Touches: repo name, Cloudflare Pages project, `wiretext.heyitsmejosh.com` DNS, App Store Connect record, in-app title/manifest. Do as one deliberate pass, not a drive-by. Rejected alternatives: Gridling, Plotline.
 
 ## App Store submission freeze, LIFTED 2026-08-18
 Freeze lifted 2026-08-18 (Guideline 5.6 suspension expired). Submitted that day and now
@@ -166,7 +166,7 @@ No code change was needed. Do not submit anything further until this review clea
 - [ ] **Hero animation pass** (Notes 2026-08-24). Josh: "Curvely and wiretext can get this treatment too, however you decide." Reference: bookrank's hero animation, copy its style and vibe, subject is Wiretext's own char-grid canvas.
 
 ## From Notes (imported 2026-08-27)
-- [ ] **ASC rename is blocked and needs a version submission.** `asc metadata apply` failed with `The field 'name' can not be modified in the current state` (app-info) and `Attribute 'description' cannot be edited at this time` (version). iOS 1.1.0 is READY_FOR_SALE and there is no editable version, so Apple will not take a name change until a new version is created and submitted for review. That is deliberately not done while the account-level Guideline 4.3(a) wave is open. When the appeal clears: create the next version, then `asc metadata plan/approve/apply --app 6794988951 --version <new>`, the canonical files already say Charwork, so it will apply cleanly. ASC record 6794988951 still reads "Wiretext" until then.
+- [ ] **ASC rename is blocked and needs a version submission.** `asc metadata apply` failed with `The field 'name' can not be modified in the current state` (app-info) and `Attribute 'description' cannot be edited at this time` (version). iOS 1.1.0 is READY_FOR_SALE and there is no editable version, so Apple will not take a name change until a new version is created and submitted for review. That is deliberately not done while the account-level Guideline 4.3(a) wave is open. When the appeal clears: create the next version, then `asc metadata plan/approve/apply --app 6794988951 --version <new>`, the canonical files already say Formwork, so it will apply cleanly. ASC record 6794988951 still reads "Wiretext" until then.
 
 ### Rename shortlist, probed 2026-08-27, authoritative
 
@@ -174,15 +174,15 @@ Probed with `asc-name-creator/probe.sh` against throwaway record 6783501927, whi
 exact-match truth (the iTunes Search API and every public checker are wrong the same way).
 `nulljosh/<name>` on GitHub is free for all six leaders. **Trademark screening was NOT done.**
 
-**AVAILABLE (13):** Charwork · Charcast · Glyphra · Glyphdraft · Boxdraw · Blockframe ·
+**AVAILABLE (13):** Formwork · Charcast · Glyphra · Glyphdraft · Boxdraw · Blockframe ·
 Cellwright · Cellwire · Runeframe · Monodraft · Wireglyph · Textframe · Sketchcell
 
 **TAKEN (9):** Charta · Asciify · Gridle · Gridwright · Stencil · Lattice · Typewire ·
 Framewright · Draftbox
 
-**Charwork is confirmed still available**, the wiki records it as already approved on
+**Formwork is confirmed still available**, the wiki records it as already approved on
 2026-08-04 and then parked ("will rename the app, repo, domain, and bundle ID"). Unless
-that decision changed, Charwork is the default and this shortlist is just the alternates.
+that decision changed, Formwork is the default and this shortlist is just the alternates.
 
 When a name is picked, the rename is more than the ASC listing: `asc apps rename --app
 6794988951`, then `INFOPLIST_KEY_CFBundleDisplayName` in `ios/project.yml` + `xcodegen
@@ -191,7 +191,7 @@ target as well as the web app), README/CLAUDE.md/landing `<title>`, the row in
 `~/Documents/Code/CLAUDE.md`, the GitHub repo, and the
 `wiretext.heyitsmejosh.com` subdomain.
 
-- [ ] **Joshua: pick a name from the shortlist above** (or confirm Charwork), then run the propagation sweep.
+- [ ] **Joshua: pick a name from the shortlist above** (or confirm Formwork), then run the propagation sweep.
 - [ ] Housekeeping: probe record 6783501927 is currently named **"Headwire"**, not "Lexly Mac", a leftover from an earlier probe run whose restore did not complete. Harmless (probe.sh saves and restores whatever it finds, and did so correctly today), but the record is the one memory says needs Apple Support to delete.
 
 ### Design pass 2026-08-27, web app now actually consumes the design system
@@ -235,7 +235,7 @@ no serif, no Berkeley Mono, and no teal/purple/indigo/orange.
 
 ## Web design (2026-08-28)
 
-Charwork's web now uses the warm paper palette from its iOS app, overriding the
+Formwork's web now uses the warm paper palette from its iOS app, overriding the
 shared Jaybulb tokens in `src/index.css`. It deliberately no longer matches the
 portfolio. Deployed and live on both domains.
 
@@ -250,7 +250,7 @@ portfolio. Deployed and live on both domains.
 - [ ] The welcome modal's scrim is `rgba(0,0,0,0.6)` -- cold and heavy against
       the warm palette; a lighter warm scrim would suit.
 
-- Upload the refreshed App Store screenshots (`ios/screenshots/` in curvely, `screenshots/` in charwork) with the next version bump, the live listing still shows the pre-rebrand shots, and screenshots can only change on a new, editable version. 2026-08-31
+- Upload the refreshed App Store screenshots (`ios/screenshots/` in curvely, `screenshots/` in formwork) with the next version bump, the live listing still shows the pre-rebrand shots, and screenshots can only change on a new, editable version. 2026-08-31
 
 ## TUI pilot (2026-09-05)
-- `charwork-tui` SwiftPM target (SwiftTUI). `swift build && ./.build/debug/charwork-tui` fetches /api/components and lists the palette with ASCII templates. Needs a real TTY.
+- `formwork-tui` SwiftPM target (SwiftTUI). `swift build && ./.build/debug/formwork-tui` fetches /api/components and lists the palette with ASCII templates. Needs a real TTY.
