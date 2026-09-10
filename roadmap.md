@@ -12,8 +12,8 @@ one-way. Click to select, drag to move, Delete/Backspace or Inspector button to
 remove. Undo/redo now snapshots elements, not raw grids.
 
 **Not done yet, in rough order:**
-- [ ] Resize (drag corner/edge handles)
-- [ ] Inline text editing on placed elements (type to relabel, not just position)
+- [x] Resize (drag corner/edge handles), web 2026-09-10
+- [x] Inline text editing on placed elements (type to relabel, not just position), web 2026-09-10
 - [ ] Multi-artboard (several canvases on one pan/zoom surface)
 - [ ] Port element model to `ios/App/Engine.swift` (currently still grid-bake only,
   kept function-for-function with the old `src/lib/engine.js` -- now diverged)
@@ -259,3 +259,5 @@ portfolio. Deployed and live on both domains.
 
 ## TUI pilot (2026-09-05)
 - `blockframe-tui` SwiftPM target (SwiftTUI). `swift build && ./.build/debug/blockframe-tui` fetches /api/components and lists the palette with ASCII templates. Needs a real TTY.
+
+Web editing: select an element, drag any edge or corner, or choose Edit text. Double-click also opens the text editor. Save applies one undoable change; Escape cancels. Resizing crops or pads character art while retaining box borders. Native parity remains open.

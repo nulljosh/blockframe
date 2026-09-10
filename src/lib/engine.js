@@ -179,3 +179,35 @@ export function moveElement(elements, id, col, row) {
 export function deleteElement(elements, id) {
   return elements.filter(el => el.id !== id);
 }
+
+// Resize character art without stretching its text. Keep line endings and box borders.
+export function resizeTemplate(template, width, height) {
+  const lines = template.map(line => [...line]);
+  const boxed = lines.length > 1 && /^[┌╭┏]/u.test(template[0]) && /^[└╰┗]/u.test(template.at(-1));
+  const fit = chars => {
+    const end = chars.at(-1);
+    const bordered = /[┐┤┘╮╯┓┫┛│┃\]]/u.test(end || '');
+    const body = bordered ? chars.slice(0, -1) : chars;
+    const fill = /^[─━_]+$/u.test(body.slice(1).join('')) ? body[1] : ' ';
+    const size = width - (bordered ? 1 : 0);
+    return [...body.slice(0, size), ...Array(Math.max(0, size - body.length)).fill(fill), ...(bordered ? [end] : [])].join('');
+  };
+  return Array.from({length: height}, (_, row) => {
+    if (boxed && row === height - 1) return fit(lines.at(-1));
+    if (boxed && row >= lines.length - 1) return fit([lines[1][0], ...Array(Math.max(0, lines[1].length - 2)).fill(' '), lines[1].at(-1)]);
+    return fit(lines[row] || []);
+  });
+}
+
+export function updateElement(elements, id, changes) {
+  return elements.map(el => {
+    if (el.id !== id) return el;
+    if (changes.text !== undefined) {
+      const template = changes.text.replace(/\r\n?/g, '\n').split('\n');
+      return {...el, template, width: Math.max(1, ...template.map(line => [...line].length)), height: template.length};
+    }
+    const width = Math.max(2, Math.round(changes.width || el.width));
+    const height = Math.max(1, Math.round(changes.height || el.height));
+    return {...el, ...changes, width, height, template: resizeTemplate(el.template, width, height)};
+  });
+}

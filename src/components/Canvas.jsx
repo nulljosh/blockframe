@@ -1,4 +1,5 @@
-import { useRef, useEffect, useCallback } from 'react';
+import ElementOverlay from './ElementOverlay.jsx';
+import { useRef, useEffect, useCallback, useState } from 'react';
 import './Canvas.css';
 import { pxToCell, stampComponent, elementAt } from '../lib/engine.js';
 
@@ -34,10 +35,13 @@ export default function Canvas({
   onCursorMove,
   onSelectElement,
   onMoveElement,
+  onUpdateElement,
   onDeleteElement,
   onUndo,
   onRedo,
 }) {
+  const [editing, setEditing] = useState(false);
+  useEffect(() => setEditing(false), [selectedId]);
   const canvasRef = useRef(null);
   const charWRef = useRef(null);
   const hoverRef = useRef(null);
@@ -220,11 +224,11 @@ export default function Canvas({
   }, [selectedPreset, getCellFromPoint, onCursorMove, onPlaceComponent]);
 
   const handleKeyDown = useCallback((e) => {
-    if ((e.ctrlKey || e.metaKey) && e.key === 'z') {
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'z' && !e.shiftKey) {
       e.preventDefault();
       onUndo();
     }
-    if ((e.ctrlKey || e.metaKey) && (e.key === 'y' || (e.shiftKey && e.key === 'z'))) {
+    if ((e.ctrlKey || e.metaKey) && (e.key === 'y' || (e.shiftKey && e.key.toLowerCase() === 'z'))) {
       e.preventDefault();
       onRedo();
     }
@@ -237,6 +241,7 @@ export default function Canvas({
   return (
     <div className="canvas-wrapper" onKeyDown={handleKeyDown} tabIndex={0}>
       <div className="canvas-scroll">
+        <div className="canvas-stage">
         <canvas
           ref={canvasRef}
           className={`canvas${selectedPreset ? ' canvas--place-mode' : ''}`}
@@ -245,8 +250,11 @@ export default function Canvas({
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseLeave}
           onClick={handleClick}
+          onDoubleClick={() => { if (selectedEl) setEditing(true); }}
           onTouchEnd={handleTouchEnd}
         />
+        {selectedEl && <ElementOverlay key={selectedEl.id + ':' + selectedEl.template.join('\n')} element={selectedEl} charWidth={getCharW()} cols={cols} rows={rows} onUpdate={onUpdateElement} editing={editing} onEdit={setEditing} />}
+        </div>
       </div>
     </div>
   );

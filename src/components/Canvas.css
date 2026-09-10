@@ -33,3 +33,14 @@
     height: 100%;
   }
 }
+
+.canvas-stage { position: relative; width: max-content; height: max-content; }
+.element-overlay { position:absolute; border:2px solid var(--accent); pointer-events:none; box-sizing:border-box; }
+.resize-handle { position:absolute; width:12px; height:12px; padding:0; border:1px solid var(--color-text); background:var(--color-bg); pointer-events:auto; touch-action:none; transform:translate(-50%,-50%); }
+.handle-nw {left:0;top:0} .handle-n {left:50%;top:0} .handle-ne {left:100%;top:0}
+.handle-w {left:0;top:50%} .handle-e {left:100%;top:50%}
+.handle-sw {left:0;top:100%} .handle-s {left:50%;top:100%} .handle-se {left:100%;top:100%}
+.element-edit {position:absolute;top:calc(100% + 10px);left:0;white-space:nowrap;pointer-events:auto}
+.element-editor {position:absolute;top:0;left:0;min-width:260px;z-index:3;pointer-events:auto;background:var(--color-bg);padding:6px;border:1px solid var(--color-text)}
+.element-editor textarea {display:block;width:100%;min-height:100px;font:14px/20px var(--font-code,monospace);white-space:pre;color:var(--color-text);background:var(--color-bg);resize:both}
+.element-editor div {display:flex;gap:6px;margin-top:6px}

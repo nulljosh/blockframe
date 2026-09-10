@@ -5,7 +5,7 @@ import Canvas from './components/Canvas.jsx';
 import Inspector from './components/Inspector.jsx';
 import {
   createState, undo, redo, pushHistory, gridToText,
-  createElement, renderElements, moveElement, deleteElement,
+  createElement, renderElements, moveElement, deleteElement, updateElement,
 } from './lib/engine.js';
 import { useWebMCP } from './lib/webmcp.js';
 
@@ -35,6 +35,13 @@ function reducer(state, action) {
       const withHistory = pushHistory(state);
       const elements = moveElement(withHistory.elements, id, col, row);
       return { ...withHistory, elements, grid: renderElements(elements, state.cols, state.rows) };
+    }
+
+    case 'UPDATE_ELEMENT': {
+      const current = state.elements.find(el => el.id === action.id);
+      if (!current || (action.changes.text !== undefined && action.changes.text === current.template.join('\n'))) return state;
+      const elements = updateElement(state.elements, action.id, action.changes);
+      return {...pushHistory(state), elements, grid: renderElements(elements, state.cols, state.rows)};
     }
 
     case 'DELETE_ELEMENT': {
@@ -143,6 +150,7 @@ export default function App() {
 
   const handleSelectElement = useCallback((id) => dispatch({ type: 'SELECT_ELEMENT', id }), []);
   const handleMoveElement = useCallback((id, col, row) => dispatch({ type: 'MOVE_ELEMENT', id, col, row }), []);
+  const handleUpdateElement = useCallback((id, changes) => dispatch({ type: 'UPDATE_ELEMENT', id, changes }), []);
   const handleDeleteElement = useCallback((id) => dispatch({ type: 'DELETE_ELEMENT', id }), []);
 
   const handleUndo = useCallback(() => dispatch({ type: 'UNDO' }), []);
@@ -264,6 +272,7 @@ export default function App() {
         onCursorMove={handleCursorMove}
         onSelectElement={handleSelectElement}
         onMoveElement={handleMoveElement}
+        onUpdateElement={handleUpdateElement}
         onDeleteElement={handleDeleteElement}
         onUndo={handleUndo}
         onRedo={handleRedo}
