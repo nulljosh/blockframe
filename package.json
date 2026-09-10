@@ -1,5 +1,5 @@
 {
-  "name": "formwork",
+  "name": "blockframe",
   "license": "MIT",
   "version": "1.1.0",
   "description": "Wireframes made of characters. Pick a component, stamp it on a monospace grid, copy as plain text.",

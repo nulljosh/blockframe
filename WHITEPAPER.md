@@ -1,4 +1,4 @@
-# Formwork Technical Whitepaper
+# Blockframe Technical Whitepaper
 
 **v1.1.0** | August 2026
 
@@ -34,7 +34,7 @@ a hover preview of the selected component before placing.
   (cursor coords, preset preview, history counts).
 - **Design**: dark-mode only, exact portfolio tokens from
   warm paper (#FAF9F5 bg, #D97757 accent, system sans). The shared
-  tokens.css is still imported, then overridden in `src/index.css` -- Formwork
+  tokens.css is still imported, then overridden in `src/index.css` -- Blockframe
   matches its own iOS app rather than the portfolio.
 
 ## iOS

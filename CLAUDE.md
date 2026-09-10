@@ -1,13 +1,14 @@
-# Formwork web
+# Blockframe web
 
 v1.1.0, Unicode wireframe tool. Vite + React 19. Warm paper design.
 
-Renamed from Charwork 2026-09-10 (web, docs, GitHub repo). The Xcode project,
-Kotlin package (`com.nulljosh.charwork`), watchOS/TUI targets, live App Store
-Connect record (6794988951), and `charwork.heyitsmejosh.com` DNS still say
-Charwork/Wiretext -- native scheme is still `Charwork-iOS` below. That's a
-separate migration (bundle IDs and ASC name availability aren't a text sweep),
-tracked in `roadmap.md`.
+Renamed from Charwork 2026-09-10 -- web, docs, GitHub repo, and the live App Store
+Connect name (6794988951, required opening version 1.1.2 to unlock the name field).
+"Formwork" was tried first and rejected as a duplicate; Blockframe was already the
+pre-approved fallback. The Xcode project/scheme (`Charwork-iOS` below), Kotlin
+package (`com.nulljosh.charwork`), bundle ID (`com.nulljosh.wiretext`), watchOS/TUI
+targets, and `charwork.heyitsmejosh.com` DNS still say Charwork/Wiretext -- separate
+native migration, tracked in `roadmap.md`.
 
 ## Run
 
@@ -33,7 +34,7 @@ grid. Light and dark, toggled in the header (persists as `wiretext-theme` in
 localStorage -- the key predates the rename and changing it would silently reset
 everyone's preference).
 
-Formwork **deliberately does not track the portfolio.** It still imports the shared
+Blockframe **deliberately does not track the portfolio.** It still imports the shared
 Jaybulb `tokens.css`, but `src/index.css` overrides the canonical `--color-*` names
 so this app matches its own iOS app instead of the estate's yellow-on-white. That
 override is the one sanctioned exception to the "never shadow the design system"

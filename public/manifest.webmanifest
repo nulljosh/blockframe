@@ -1,6 +1,6 @@
 {
-  "name": "Formwork",
-  "short_name": "Formwork",
+  "name": "Blockframe",
+  "short_name": "Blockframe",
   "description": "Unicode wireframe design tool.",
   "start_url": "/app/",
   "scope": "/app/",
