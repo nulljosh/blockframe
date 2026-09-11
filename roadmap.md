@@ -12,8 +12,6 @@ one-way. Click to select, drag to move, Delete/Backspace or Inspector button to
 remove. Undo/redo now snapshots elements, not raw grids.
 
 **Not done yet, in rough order:**
-- [x] Resize (drag corner/edge handles), web 2026-09-10
-- [x] Inline text editing on placed elements (type to relabel, not just position), web 2026-09-10
 - [ ] Multi-artboard (several canvases on one pan/zoom surface)
 - [ ] Port element model to `ios/App/Engine.swift` (currently still grid-bake only,
   kept function-for-function with the old `src/lib/engine.js` -- now diverged)
@@ -101,10 +99,6 @@ Review submission `27425fb8-9404-42a0-88bf-ec85773ed696`, submitted 2026-08-03T1
 
 ## WKWebView shell (reviewed 2026-07-22)
 Not a gap, `CLAUDE.md` documents this as intentional ("app has no native API needs"). Unlike Books, this was a deliberate choice, not an oversight. Revisit only if wiretext ever needs a real native API. If it's ever ported anyway: no real blockers (grid/undo logic and 23 presets are plain data, map cleanly to SwiftUI), could also resolve the still-open blank-white-screen sim bug above as a side effect.
-
-## Decision 2026-08-04
-
-- [x] Rename wiretext -> Charwork (approved 2026-08-04, deliberately parked - "we can work on it later", not urgent). Reason: current name was copied from the source idea. Rejected alternatives: Gridling, Plotline. **Superseded 2026-09-10 — see below, renamed again to Blockframe.**
 
 ## App Store submission freeze, LIFTED 2026-08-18
 Freeze lifted 2026-08-18 (Guideline 5.6 suspension expired). Submitted that day and now
@@ -196,7 +190,6 @@ target as well as the web app), README/CLAUDE.md/landing `<title>`, the row in
 `~/Documents/Code/CLAUDE.md`, the GitHub repo, and the
 `wiretext.heyitsmejosh.com` subdomain.
 
-- [x] **Confirmed Blockframe, applied 2026-09-10.** See the top-of-file decision entry.
 - [ ] Housekeeping: probe record 6783501927 is currently named **"Headwire"**, not "Lexly Mac", a leftover from an earlier probe run whose restore did not complete. Harmless (probe.sh saves and restores whatever it finds, and did so correctly today), but the record is the one memory says needs Apple Support to delete.
 
 ### Design pass 2026-08-27, web app now actually consumes the design system
