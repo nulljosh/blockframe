@@ -2,6 +2,7 @@
 
 # Blockframe
 ![version](https://img.shields.io/badge/version-v1.1.0-blue)
+![license](https://img.shields.io/badge/license-MIT-green) [![GitHub](https://img.shields.io/badge/GitHub-nulljosh%2Fblockframe-black?logo=github)](https://github.com/nulljosh/blockframe)
 
 Wireframes made of characters.
 
