@@ -26,7 +26,7 @@ struct ContentView: View {
                 CanvasView(grid: state.grid, fontSize: fontSize, onTap: place)
             }
             .background(Theme.background)
-            .navigationTitle("Charwork")
+            .navigationTitle("Block Frame")
             .toolbar {
                 ToolbarItemGroup(placement: .bottomBar) {
                     toolButton("Undo", systemImage: "arrow.uturn.backward", enabled: state.canUndo, action: undo)

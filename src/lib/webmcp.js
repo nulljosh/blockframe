@@ -1,4 +1,4 @@
-// WebMCP tool registration. Exposes Charwork's wireframe actions to in-browser
+// WebMCP tool registration. Exposes Block Frame's wireframe actions to in-browser
 // agents via document.modelContext.
 //
 // ponytail: tools dispatch the same reducer actions the toolbar and canvas

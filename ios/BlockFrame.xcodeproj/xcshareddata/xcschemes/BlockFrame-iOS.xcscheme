@@ -15,10 +15,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BB0127076491361CB8955545"
-               BuildableName = "Charwork-iOS.app"
-               BlueprintName = "Charwork-iOS"
-               ReferencedContainer = "container:Charwork.xcodeproj">
+               BlueprintIdentifier = "3D341DB7A68DD559C4597C55"
+               BuildableName = "BlockFrame-iOS.app"
+               BlueprintName = "BlockFrame-iOS"
+               ReferencedContainer = "container:BlockFrame.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BB0127076491361CB8955545"
-            BuildableName = "Charwork-iOS.app"
-            BlueprintName = "Charwork-iOS"
-            ReferencedContainer = "container:Charwork.xcodeproj">
+            BlueprintIdentifier = "3D341DB7A68DD559C4597C55"
+            BuildableName = "BlockFrame-iOS.app"
+            BlueprintName = "BlockFrame-iOS"
+            ReferencedContainer = "container:BlockFrame.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BB0127076491361CB8955545"
-            BuildableName = "Charwork-iOS.app"
-            BlueprintName = "Charwork-iOS"
-            ReferencedContainer = "container:Charwork.xcodeproj">
+            BlueprintIdentifier = "3D341DB7A68DD559C4597C55"
+            BuildableName = "BlockFrame-iOS.app"
+            BlueprintName = "BlockFrame-iOS"
+            ReferencedContainer = "container:BlockFrame.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BB0127076491361CB8955545"
-            BuildableName = "Charwork-iOS.app"
-            BlueprintName = "Charwork-iOS"
-            ReferencedContainer = "container:Charwork.xcodeproj">
+            BlueprintIdentifier = "3D341DB7A68DD559C4597C55"
+            BuildableName = "BlockFrame-iOS.app"
+            BlueprintName = "BlockFrame-iOS"
+            ReferencedContainer = "container:BlockFrame.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

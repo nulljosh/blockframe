@@ -1,4 +1,4 @@
-name: CharworkWatch
+name: BlockFrameWatch
 options:
   bundleIdPrefix: com.nulljosh
   deploymentTarget:
@@ -10,7 +10,7 @@ settings:
   CURRENT_PROJECT_VERSION: "1"
   CODE_SIGN_STYLE: Automatic
 targets:
-  CharworkWatch:
+  BlockFrameWatch:
     type: application
     platform: watchOS
     sources:
@@ -25,4 +25,4 @@ targets:
       INFOPLIST_KEY_WKWatchOnly: YES
       PRODUCT_BUNDLE_IDENTIFIER: com.nulljosh.wiretext.watchos
       ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
-      PRODUCT_NAME: Charwork
+      PRODUCT_NAME: BlockFrame

@@ -16,16 +16,16 @@
         },
         {
           "name": "archive",
-          "run": "cd ios && asc xcode archive --project Charwork.xcodeproj --scheme Charwork-iOS --archive-path ../.asc/artifacts/Charwork.xcarchive --overwrite --xcodebuild-flag=-skipPackagePluginValidation --xcodebuild-flag=-allowProvisioningUpdates --output json"
+          "run": "cd ios && asc xcode archive --project BlockFrame.xcodeproj --scheme BlockFrame-iOS --archive-path ../.asc/artifacts/BlockFrame.xcarchive --overwrite --xcodebuild-flag=-skipPackagePluginValidation --xcodebuild-flag=-allowProvisioningUpdates --output json"
         },
         {
           "name": "export",
-          "run": "cd ios && asc xcode export --archive-path ../.asc/artifacts/Charwork.xcarchive --export-options ExportOptions.plist --xcodebuild-flag=-allowProvisioningUpdates --overwrite --ipa-path ../.asc/artifacts/Charwork.ipa --output json"
+          "run": "cd ios && asc xcode export --archive-path ../.asc/artifacts/BlockFrame.xcarchive --export-options ExportOptions.plist --xcodebuild-flag=-allowProvisioningUpdates --overwrite --ipa-path ../.asc/artifacts/BlockFrame.ipa --output json"
         },
         {
           "name": "publish",
           "if": "SUBMIT",
-          "run": "asc publish appstore --app $IOS_APP_ID --ipa .asc/artifacts/Charwork.ipa --version $VERSION --wait --submit --confirm --output json"
+          "run": "asc publish appstore --app $IOS_APP_ID --ipa .asc/artifacts/BlockFrame.ipa --version $VERSION --wait --submit --confirm --output json"
         }
       ]
     }

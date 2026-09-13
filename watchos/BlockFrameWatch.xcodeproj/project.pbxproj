@@ -7,168 +7,168 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D24CBD003E227602C332F1D /* PaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDF5E2EFD144FC7BA9A4C56 /* PaletteView.swift */; };
-		26CE17DA83CEB90329F379F0 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1A98863A8DD9EACAEFC466 /* Theme.swift */; };
-		3C3BA1E7907B261EF79FB222 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B5356EA467DB8601D88ADA /* CanvasView.swift */; };
-		613C6A0577644EFBCCA3D967 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8834DC3A0F17BCF4E775C66B /* ContentView.swift */; };
-		7E3A1EAC1C7DE4F037547440 /* CharworkWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDE891A2634FC36B788F8FE /* CharworkWatchApp.swift */; };
-		9CDF91C47E75A04EE30B4403 /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C21EF960B2451C3380C55D /* Engine.swift */; };
-		BBB9FCF7207DD43662BA7321 /* Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09FE26C46DD5BDFD3C55E55 /* Presets.swift */; };
-		D8A503571ACF25FF4CB0494F /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC24E0A8CC5EF8308C6D846 /* Store.swift */; };
-		EF62A5C2EF2E2D89D50C8EB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4249D2698E70653B3CFCB30 /* Assets.xcassets */; };
+		081527CAB740A7A734E55C46 /* BlockFrameWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B99A2CCF988F358E862FC2 /* BlockFrameWatchApp.swift */; };
+		6408CF84786C3FD9304698B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11C84B2A92BCC64D213AB46 /* ContentView.swift */; };
+		7138A47C38A08C4155AA1A8D /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89231786D314ECF618E87FBC /* Engine.swift */; };
+		74D4DFA21F9489645E432025 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336B3BD1DC740F22DC648136 /* Theme.swift */; };
+		7FDF5BDB7049B8E908E35EDE /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F22386F81AC1EC608604026 /* Store.swift */; };
+		A1054D48FD1656E6B4D246ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7407E5D9F55A18236CA5565A /* Assets.xcassets */; };
+		AEBFA72FECE20B3A34AA3B8C /* Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A1862A4A6B49CCD9402FF6 /* Presets.swift */; };
+		CDDD5BAFEA13324B75B9FC7B /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8E6E6C1B3BA285F13404CC /* CanvasView.swift */; };
+		D450C03BF368E6F5B63BCFDE /* PaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AC91B527A803B7C81E45FE /* PaletteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		24C21EF960B2451C3380C55D /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
-		2EC24E0A8CC5EF8308C6D846 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
-		6BDE891A2634FC36B788F8FE /* CharworkWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharworkWatchApp.swift; sourceTree = "<group>"; };
-		77B5356EA467DB8601D88ADA /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
-		8834DC3A0F17BCF4E775C66B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		9E1A98863A8DD9EACAEFC466 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-		CBDF5E2EFD144FC7BA9A4C56 /* PaletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteView.swift; sourceTree = "<group>"; };
-		D09C9F0DCE0F398E81F0F5D2 /* CharworkWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CharworkWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4249D2698E70653B3CFCB30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E09FE26C46DD5BDFD3C55E55 /* Presets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presets.swift; sourceTree = "<group>"; };
+		336B3BD1DC740F22DC648136 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		53A1862A4A6B49CCD9402FF6 /* Presets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presets.swift; sourceTree = "<group>"; };
+		6F22386F81AC1EC608604026 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		7407E5D9F55A18236CA5565A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		89231786D314ECF618E87FBC /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
+		B11C84B2A92BCC64D213AB46 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C9AC91B527A803B7C81E45FE /* PaletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteView.swift; sourceTree = "<group>"; };
+		CC8E6E6C1B3BA285F13404CC /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		E0316559F8698F8C10DAD64F /* BlockFrameWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockFrameWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3B99A2CCF988F358E862FC2 /* BlockFrameWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockFrameWatchApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		1C6274C9E388B0EA7C45751C /* Products */ = {
+		05A7C9014E330545FD93ABF3 = {
 			isa = PBXGroup;
 			children = (
-				D09C9F0DCE0F398E81F0F5D2 /* CharworkWatch.app */,
+				4C85BE6F4EBF233298B2E62B /* Models */,
+				AF00732071A33A5EE611C6D8 /* Views */,
+				EC50EF8E9AA86AE5006FE4D1 /* watchos */,
+				F8159E3BE477D8D87EEB9C67 /* Products */,
 			);
-			name = Products;
 			sourceTree = "<group>";
 		};
-		4DF4BDFAA69181D85E68ADF4 /* Views */ = {
+		4C85BE6F4EBF233298B2E62B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				77B5356EA467DB8601D88ADA /* CanvasView.swift */,
-				CBDF5E2EFD144FC7BA9A4C56 /* PaletteView.swift */,
-				9E1A98863A8DD9EACAEFC466 /* Theme.swift */,
+				89231786D314ECF618E87FBC /* Engine.swift */,
+				53A1862A4A6B49CCD9402FF6 /* Presets.swift */,
+				6F22386F81AC1EC608604026 /* Store.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AF00732071A33A5EE611C6D8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CC8E6E6C1B3BA285F13404CC /* CanvasView.swift */,
+				C9AC91B527A803B7C81E45FE /* PaletteView.swift */,
+				336B3BD1DC740F22DC648136 /* Theme.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		63D1311940C316EB089C1825 = {
+		EC50EF8E9AA86AE5006FE4D1 /* watchos */ = {
 			isa = PBXGroup;
 			children = (
-				C791D5315F79D8E67B6153FF /* Models */,
-				4DF4BDFAA69181D85E68ADF4 /* Views */,
-				BEA5852F81DCAEF71C4A240F /* watchos */,
-				1C6274C9E388B0EA7C45751C /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		BEA5852F81DCAEF71C4A240F /* watchos */ = {
-			isa = PBXGroup;
-			children = (
-				D4249D2698E70653B3CFCB30 /* Assets.xcassets */,
-				6BDE891A2634FC36B788F8FE /* CharworkWatchApp.swift */,
-				8834DC3A0F17BCF4E775C66B /* ContentView.swift */,
-				C791D5315F79D8E67B6153FF /* Models */,
-				4DF4BDFAA69181D85E68ADF4 /* Views */,
+				7407E5D9F55A18236CA5565A /* Assets.xcassets */,
+				E3B99A2CCF988F358E862FC2 /* BlockFrameWatchApp.swift */,
+				B11C84B2A92BCC64D213AB46 /* ContentView.swift */,
+				4C85BE6F4EBF233298B2E62B /* Models */,
+				AF00732071A33A5EE611C6D8 /* Views */,
 			);
 			name = watchos;
 			path = .;
 			sourceTree = "<group>";
 		};
-		C791D5315F79D8E67B6153FF /* Models */ = {
+		F8159E3BE477D8D87EEB9C67 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				24C21EF960B2451C3380C55D /* Engine.swift */,
-				E09FE26C46DD5BDFD3C55E55 /* Presets.swift */,
-				2EC24E0A8CC5EF8308C6D846 /* Store.swift */,
+				E0316559F8698F8C10DAD64F /* BlockFrameWatch.app */,
 			);
-			path = Models;
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8A30F1CC1D108921B3785ACD /* CharworkWatch */ = {
+		41271FF1C784074C6D7A7DBF /* BlockFrameWatch */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F7A95629DF704CE5D681A6DD /* Build configuration list for PBXNativeTarget "CharworkWatch" */;
+			buildConfigurationList = 66B5338812EA3F529EF951F7 /* Build configuration list for PBXNativeTarget "BlockFrameWatch" */;
 			buildPhases = (
-				914C3CC2CBBAB4B5095DA764 /* Sources */,
-				8E79F157EDA805AEB15FEC9C /* Resources */,
+				20D73F8D94124515811FC728 /* Sources */,
+				39047CAD790E1550A4B3790D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = CharworkWatch;
+			name = BlockFrameWatch;
 			packageProductDependencies = (
 			);
-			productName = CharworkWatch;
-			productReference = D09C9F0DCE0F398E81F0F5D2 /* CharworkWatch.app */;
+			productName = BlockFrameWatch;
+			productReference = E0316559F8698F8C10DAD64F /* BlockFrameWatch.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		32CB90078390B04479FDD8E1 /* Project object */ = {
+		81526846113D10A5BD3F351B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					8A30F1CC1D108921B3785ACD = {
+					41271FF1C784074C6D7A7DBF = {
 						DevelopmentTeam = QMM486NPYC;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 4850E3732616CE4060C22C61 /* Build configuration list for PBXProject "CharworkWatch" */;
+			buildConfigurationList = 81F4E438ABCFEB2521992E3D /* Build configuration list for PBXProject "BlockFrameWatch" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				Base,
 				en,
 			);
-			mainGroup = 63D1311940C316EB089C1825;
+			mainGroup = 05A7C9014E330545FD93ABF3;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 1C6274C9E388B0EA7C45751C /* Products */;
+			productRefGroup = F8159E3BE477D8D87EEB9C67 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8A30F1CC1D108921B3785ACD /* CharworkWatch */,
+				41271FF1C784074C6D7A7DBF /* BlockFrameWatch */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8E79F157EDA805AEB15FEC9C /* Resources */ = {
+		39047CAD790E1550A4B3790D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF62A5C2EF2E2D89D50C8EB6 /* Assets.xcassets in Resources */,
+				A1054D48FD1656E6B4D246ED /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		914C3CC2CBBAB4B5095DA764 /* Sources */ = {
+		20D73F8D94124515811FC728 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C3BA1E7907B261EF79FB222 /* CanvasView.swift in Sources */,
-				7E3A1EAC1C7DE4F037547440 /* CharworkWatchApp.swift in Sources */,
-				613C6A0577644EFBCCA3D967 /* ContentView.swift in Sources */,
-				9CDF91C47E75A04EE30B4403 /* Engine.swift in Sources */,
-				0D24CBD003E227602C332F1D /* PaletteView.swift in Sources */,
-				BBB9FCF7207DD43662BA7321 /* Presets.swift in Sources */,
-				D8A503571ACF25FF4CB0494F /* Store.swift in Sources */,
-				26CE17DA83CEB90329F379F0 /* Theme.swift in Sources */,
+				081527CAB740A7A734E55C46 /* BlockFrameWatchApp.swift in Sources */,
+				CDDD5BAFEA13324B75B9FC7B /* CanvasView.swift in Sources */,
+				6408CF84786C3FD9304698B0 /* ContentView.swift in Sources */,
+				7138A47C38A08C4155AA1A8D /* Engine.swift in Sources */,
+				D450C03BF368E6F5B63BCFDE /* PaletteView.swift in Sources */,
+				AEBFA72FECE20B3A34AA3B8C /* Presets.swift in Sources */,
+				7FDF5BDB7049B8E908E35EDE /* Store.swift in Sources */,
+				74D4DFA21F9489645E432025 /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		15778B4573B6A57F16961B15 /* Debug */ = {
+		1760351A06D37CBC856028F4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -176,14 +176,14 @@
 				INFOPLIST_FILE = "";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nulljosh.wiretext.watchos;
-				PRODUCT_NAME = Charwork;
+				PRODUCT_NAME = BlockFrame;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 			};
-			name = Debug;
+			name = Release;
 		};
-		6FE6D3842A3E97017C4F33A2 /* Debug */ = {
+		220A1148D62D5BF3DCCE3CAA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -250,22 +250,7 @@
 			};
 			name = Debug;
 		};
-		81A8056CB0EAF7CCF760E410 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "";
-				INFOPLIST_KEY_WKWatchOnly = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nulljosh.wiretext.watchos;
-				PRODUCT_NAME = Charwork;
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-			};
-			name = Release;
-		};
-		8434F2608CAABF51CBCFB00B /* Release */ = {
+		4BFA782A3F4F816A156E979D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -325,28 +310,43 @@
 			};
 			name = Release;
 		};
+		F1200BD8A0FE1775093B1058 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nulljosh.wiretext.watchos;
+				PRODUCT_NAME = BlockFrame;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4850E3732616CE4060C22C61 /* Build configuration list for PBXProject "CharworkWatch" */ = {
+		66B5338812EA3F529EF951F7 /* Build configuration list for PBXNativeTarget "BlockFrameWatch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6FE6D3842A3E97017C4F33A2 /* Debug */,
-				8434F2608CAABF51CBCFB00B /* Release */,
+				F1200BD8A0FE1775093B1058 /* Debug */,
+				1760351A06D37CBC856028F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		F7A95629DF704CE5D681A6DD /* Build configuration list for PBXNativeTarget "CharworkWatch" */ = {
+		81F4E438ABCFEB2521992E3D /* Build configuration list for PBXProject "BlockFrameWatch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				15778B4573B6A57F16961B15 /* Debug */,
-				81A8056CB0EAF7CCF760E410 /* Release */,
+				220A1148D62D5BF3DCCE3CAA /* Debug */,
+				4BFA782A3F4F816A156E979D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 32CB90078390B04479FDD8E1 /* Project object */;
+	rootObject = 81526846113D10A5BD3F351B /* Project object */;
 }

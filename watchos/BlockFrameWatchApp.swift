@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct CharworkWatchApp: App {
+struct BlockFrameWatchApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

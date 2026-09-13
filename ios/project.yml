@@ -1,4 +1,4 @@
-name: Charwork
+name: BlockFrame
 options:
   bundleIdPrefix: com.nulljosh
   deploymentTarget:
@@ -13,7 +13,7 @@ settings:
     CURRENT_PROJECT_VERSION: "202608310815"
 
 targets:
-  Charwork-iOS:
+  BlockFrame-iOS:
     type: application
     # One target, two destinations (the pattern wordroot/ios/project.yml proves out) rather
     # than nimble's two separate targets — there are no platform-specific sources to exclude.
@@ -35,18 +35,18 @@ targets:
         # application-identifier while the embedded profile does — Apple rejects
         # that combination for TestFlight with ITMS-90886. Hand-committed rather
         # than generated via xcodegen `entitlements.properties` (drops keys).
-        # Charwork.entitlements (was Wiretext.entitlements) existed since 08-03 but was never referenced here,
+        # BlockFrame.entitlements (was Wiretext.entitlements) existed since 08-03 but was never referenced here,
         # so xcodegen dropped it and every build shipped without it.
-        CODE_SIGN_ENTITLEMENTS: Charwork.entitlements
+        CODE_SIGN_ENTITLEMENTS: BlockFrame.entitlements
         # Per-SDK, not one shared file: the iOS file's `application-identifier` is not a
         # valid macOS entitlement and makes Mac profile creation fail outright.
-        CODE_SIGN_ENTITLEMENTS[sdk=macosx*]: Charwork-macOS.entitlements
+        CODE_SIGN_ENTITLEMENTS[sdk=macosx*]: BlockFrame-macOS.entitlements
 
 schemes:
-  Charwork-iOS:
+  BlockFrame-iOS:
     build:
       targets:
-        Charwork-iOS: all
+        BlockFrame-iOS: all
     run:
       config: Debug
     archive:
