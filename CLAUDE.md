@@ -2,12 +2,12 @@
 
 v1.1.0, Unicode wireframe tool. Vite + React 19. Warm paper design.
 
-Renamed from Charwork 2026-09-10 -- web, docs, GitHub repo, and the live App Store
+Renamed from Block Frame 2026-09-10 -- web, docs, GitHub repo, and the live App Store
 Connect name (6794988951, required opening version 1.1.2 to unlock the name field).
 "Formwork" was tried first and rejected as a duplicate; Blockframe was already the
-pre-approved fallback. The Xcode project/scheme (`Charwork-iOS` below), Kotlin
-package (`com.nulljosh.charwork`), bundle ID (`com.nulljosh.wiretext`), watchOS/TUI
-targets, and `charwork.heyitsmejosh.com` DNS still say Charwork/Wiretext -- separate
+pre-approved fallback. The Xcode project/scheme (`Block Frame-iOS` below), Kotlin
+package (`com.nulljosh.blockframe`), bundle ID (`com.nulljosh.wiretext`), watchOS/TUI
+targets, and `blockframe.heyitsmejosh.com` DNS still say Block Frame/Wiretext -- separate
 native migration, tracked in `roadmap.md`.
 
 ## Run
@@ -60,13 +60,13 @@ assets are bundled any more; `npm run build:ios` is no longer part of the iOS bu
 
 ```bash
 cd ios && xcodegen generate
-xcodebuild build -scheme Charwork-iOS -destination 'generic/platform=iOS Simulator' \
-  -derivedDataPath /tmp/dd-charwork -skipPackagePluginValidation
+xcodebuild build -scheme Block Frame-iOS -destination 'generic/platform=iOS Simulator' \
+  -derivedDataPath /tmp/dd-blockframe -skipPackagePluginValidation
 
 # macOS. No Mac provisioning profile exists for com.nulljosh.wiretext yet, so a signed
 # build needs -allowProvisioningUpdates; this compiles and runs it without one.
-xcodebuild build -scheme Charwork-iOS -destination 'platform=macOS' \
-  -derivedDataPath /tmp/dd-charwork-mac -skipPackagePluginValidation \
+xcodebuild build -scheme Block Frame-iOS -destination 'platform=macOS' \
+  -derivedDataPath /tmp/dd-blockframe-mac -skipPackagePluginValidation \
   CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY=""
 
 # engine self-check, no framework needed

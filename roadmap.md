@@ -18,7 +18,7 @@ remove. Undo/redo now snapshots elements, not raw grids.
 - [ ] Update `src/lib/webmcp.js` / `src/lib/tools.js` MCP surface if agents need to
   select/move/delete elements, not just place them
 
-**Naming, applied 2026-09-10:** renamed Charwork -> **Blockframe**. First tried
+**Naming, applied 2026-09-10:** renamed Block Frame -> **Blockframe**. First tried
 "Formwork" -- rejected live by `asc apps rename` as a duplicate (exact-match
 namespace). Blockframe was already the pre-approved name from the 2026-08-27 probe
 below, so used it instead: ASC app name changed live on app 6794988951 (required
@@ -26,10 +26,10 @@ opening a fresh version, 1.1.2, since the name field locks once READY_FOR_SALE),
 renamed on GitHub (`nulljosh/blockframe`), local dir moved to
 `~/Documents/Code/blockframe`, docs/package.json/landing/in-app header all updated.
 
-Still Charwork/Wiretext, deliberately not touched (separate native migration, not a
-text sweep): Xcode project/scheme (`Charwork-iOS`), Kotlin package
-`com.nulljosh.charwork`, bundle ID `com.nulljosh.wiretext`, watchOS/TUI targets, and
-`charwork.heyitsmejosh.com` DNS.
+Still Block Frame/Wiretext, deliberately not touched (separate native migration, not a
+text sweep): Xcode project/scheme (`Block Frame-iOS`), Kotlin package
+`com.nulljosh.blockframe`, bundle ID `com.nulljosh.wiretext`, watchOS/TUI targets, and
+`blockframe.heyitsmejosh.com` DNS.
 
 - [ ] Verify iPad layout visually on simulator -- 2026-09-02. Code review found no
   structural iPad issue (full-bleed canvas tool, `TARGETED_DEVICE_FAMILY = "1,2"` already
