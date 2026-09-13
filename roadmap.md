@@ -26,10 +26,16 @@ opening a fresh version, 1.1.2, since the name field locks once READY_FOR_SALE),
 renamed on GitHub (`nulljosh/blockframe`), local dir moved to
 `~/Documents/Code/blockframe`, docs/package.json/landing/in-app header all updated.
 
-Still Block Frame/Wiretext, deliberately not touched (separate native migration, not a
-text sweep): Xcode project/scheme (`Block Frame-iOS`), Kotlin package
-`com.nulljosh.blockframe`, bundle ID `com.nulljosh.wiretext`, watchOS/TUI targets, and
-`blockframe.heyitsmejosh.com` DNS.
+**2026-09-12 — Xcode projects renamed:** `ios/Charwork.xcodeproj` → `ios/BlockFrame.xcodeproj`
+(target `Charwork-iOS` → `BlockFrame-iOS`, entry `CharworkApp.swift` → `BlockFrameApp.swift`);
+`watchos/CharworkWatch.xcodeproj` → `watchos/BlockFrameWatch.xcodeproj` (target `CharworkWatch`
+→ `BlockFrameWatch`, entry `CharworkWatchApp.swift` → `BlockFrameWatchApp.swift`).
+Updated `.asc/workflow.json`, regenerated via `xcodegen generate`, iOS builds green.
+Commits 5a9073e, 0716949.
+
+Still not touched: Kotlin package `com.nulljosh.blockframe`, bundle ID
+`com.nulljosh.wiretext`, and `blockframe.heyitsmejosh.com` DNS (domain add blocked
+on Cloudflare token scope).
 
 - [ ] Verify iPad layout visually on simulator -- 2026-09-02. Code review found no
   structural iPad issue (full-bleed canvas tool, `TARGETED_DEVICE_FAMILY = "1,2"` already
