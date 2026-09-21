@@ -1,6 +1,6 @@
 # Architecture
 
-A Unicode wireframe canvas editor for drawing ASCII box-drawing interfaces. Drag-and-drop component palette (buttons, input fields, etc.), undo/redo, grid-based snapping. Ships as a web app, iOS app, macOS app, and Android (Kotlin Multiplatform). A warm-paper theme (not shared portfolio tokens). Export as plain text, integrate via API or Claude MCP.
+Blockframe lets you sketch app wireframes out of text characters instead of shapes, like an ASCII art screen mockup you can drag and drop together. Pick a button, input field, or box from a palette, drop it on a grid, and export the result as plain text you can paste anywhere. It ships as a web app, iOS app, macOS app, and Android app (the Android and desktop versions share code written in Kotlin, a language that compiles to both). It has its own warm-paper look, separate from other apps' shared design system.
 
 ## How it runs
 
