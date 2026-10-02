@@ -260,3 +260,6 @@ portfolio. Deployed and live on both domains.
 - `blockframe-tui` SwiftPM target (SwiftTUI). `swift build && ./.build/debug/blockframe-tui` fetches /api/components and lists the palette with ASCII templates. Needs a real TTY.
 
 Web editing: select an element, drag any edge or corner, or choose Edit text. Double-click also opens the text editor. Save applies one undoable change; Escape cancels. Resizing crops or pads character art while retaining box borders. Native parity remains open.
+
+## Ingested 2026-10-02
+- [ ] Stale name: the Charwork name is stale somewhere (Joshua's note just said "Charwork, stale name"). Which surface still says Charwork?
