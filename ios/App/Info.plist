@@ -5,9 +5,9 @@
     <key>CFBundleExecutable</key>
     <string>$(EXECUTABLE_NAME)</string>
     <key>CFBundleName</key>
-    <string>Charblock</string>
+    <string>Blockframe</string>
     <key>CFBundleDisplayName</key>
-    <string>Charblock</string>
+    <string>Blockframe</string>
     <key>CFBundleIdentifier</key>
     <string>com.nulljosh.wiretext</string>
     <key>CFBundlePackageType</key>

@@ -26,7 +26,7 @@
   --accent-muted: rgba(217, 119, 87, 0.14);
 }
 
-/* ponytail: Charwork-only override of the shared Jaybulb tokens. This app tracks
+/* ponytail: Blockframe-only override of the shared Jaybulb tokens. This app tracks
    its own iOS app (warm paper + terracotta), not the estate's yellow-on-white --
    the deliberate exception to the "never shadow the design system" rule above.
    Canonical --color-* names only: tokens.css defines --bg/--text/--accent by

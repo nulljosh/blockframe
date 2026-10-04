@@ -29,7 +29,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun CharworkTheme(content: @Composable () -> Unit) =
+fun BlockframeTheme(content: @Composable () -> Unit) =
     MaterialTheme(colorScheme = lightColorScheme(), content = content)
 
 private const val CHAR_W = 9f
@@ -49,7 +49,7 @@ fun AppScreen() {
 
     Surface {
         Column(Modifier.fillMaxSize().padding(24.dp)) {
-            Text("Charwork", style = MaterialTheme.typography.headlineMedium)
+            Text("Blockframe", style = MaterialTheme.typography.headlineMedium)
             Row(Modifier.padding(top = 8.dp)) {
                 Button(onClick = { state = undo(state) }) { Text("Undo") }
                 Button(onClick = { state = redo(state) }, modifier = Modifier.padding(start = 8.dp)) { Text("Redo") }

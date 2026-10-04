@@ -1,6 +1,6 @@
-# Charblock Money
+# Blockframe Money
 
-How Charblock makes money. The fleet-wide ledger is `GTM.md` in the Code root.
+How Blockframe makes money. The fleet-wide ledger is `GTM.md` in the Code root.
 
 ## Price
 
@@ -22,6 +22,6 @@ Nothing to build. Watch App Store Connect sales. If a month passes with installs
 
 `asc pricing schedule create --app 6794988951 --price 0.99 --base-territory USA --start-date YYYY-MM-DD`. Swap `--price 0.99` for `--free` to revert. No build, no review.
 
-Anyone who got Charblock while it was free keeps it free. Only new customers pay.
+Anyone who got Blockframe while it was free keeps it free. Only new customers pay.
 
 *ASC 6794988951. Set 2026-09-20.*

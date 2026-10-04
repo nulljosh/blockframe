@@ -8,9 +8,9 @@ import androidx.compose.ui.window.rememberWindowState
 fun main() = application {
     Window(
         onCloseRequest = ::exitApplication,
-        title = "Charwork",
+        title = "Blockframe",
         state = rememberWindowState(width = 1040.dp, height = 720.dp),
     ) {
-        CharworkTheme { AppScreen() }
+        BlockframeTheme { AppScreen() }
     }
 }
