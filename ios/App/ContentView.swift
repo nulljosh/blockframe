@@ -34,7 +34,7 @@ struct ContentView: View {
 
     private var toolbar: some View {
         HStack(spacing: 16) {
-            Text("Block Frame")
+            Text("Blockframe")
                 .font(.title3.weight(.semibold))
                 .foregroundStyle(Theme.ink)
 

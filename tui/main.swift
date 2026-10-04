@@ -24,7 +24,7 @@ struct PaletteCard: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Block Frame components").bold()
+            Text("Blockframe components").bold()
             if let palette {
                 ForEach(palette.components) { c in
                     Text("\(c.label) (\(c.category)): \(c.template.first ?? "")")
