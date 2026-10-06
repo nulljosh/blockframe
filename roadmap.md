@@ -263,3 +263,8 @@ Web editing: select an element, drag any edge or corner, or choose Edit text. Do
 
 ## Ingested 2026-10-02
 - [ ] Stale name: the Charwork name is stale somewhere (Joshua's note just said "Charwork, stale name"). Which surface still says Charwork?
+
+## Ingested 2026-10-05
+- [ ] Name change worked, but the app doesn't need a title. Just the app itself.
+- [ ] Refresh App Store screenshots
+- [ ] Remove the tan/sand color. No more of that color. (screenshot: notes/attachments/2026-10-05/blockframe-1.png)
