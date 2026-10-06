@@ -266,5 +266,5 @@ Web editing: select an element, drag any edge or corner, or choose Edit text. Do
 
 ## Ingested 2026-10-05
 - [x] Name change worked, but the app doesn't need a title. Just the app itself. (iOS/macOS toolbar title removed 2026-10-05)
-- [ ] Refresh App Store screenshots
+- [x] Refresh App Store screenshots (iPhone 6.9in 1320x2868 and iPad 13in, neutral look, no title, 2026-10-05; old 6.5in set removed)
 - [x] Remove the tan/sand color. No more of that color. (iOS Theme is neutral gray and white 2026-10-05; web tokens still warm paper) (screenshot: notes/attachments/2026-10-05/blockframe-1.png)
