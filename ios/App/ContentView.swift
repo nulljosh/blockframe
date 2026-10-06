@@ -34,10 +34,6 @@ struct ContentView: View {
 
     private var toolbar: some View {
         HStack(spacing: 16) {
-            Text("Blockframe")
-                .font(.title3.weight(.semibold))
-                .foregroundStyle(Theme.ink)
-
             Spacer()
 
             toolButton("Undo", systemImage: "arrow.uturn.backward", enabled: state.canUndo, action: undo)
