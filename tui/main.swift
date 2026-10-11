@@ -14,7 +14,7 @@ struct Component: Decodable, Identifiable {
 struct Palette: Decodable { let count: Int; let components: [Component] }
 
 func fetchPalette() async -> Palette? {
-    guard let url = URL(string: "https://wiretext.heyitsmejosh.com/api/components") else { return nil }
+    guard let url = URL(string: "https://wiretext.jaybulb.com/api/components") else { return nil }
     guard let (data, _) = try? await URLSession.shared.data(from: url) else { return nil }
     return try? JSONDecoder().decode(Palette.self, from: data)
 }
@@ -30,7 +30,7 @@ struct PaletteCard: View {
                     Text("\(c.label) (\(c.category)): \(c.template.first ?? "")")
                 }
             } else {
-                Text("Could not reach wiretext.heyitsmejosh.com")
+                Text("Could not reach wiretext.jaybulb.com")
             }
         }
         .padding()
