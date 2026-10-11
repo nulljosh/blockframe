@@ -1,4 +1,4 @@
-1/ Blockframe is live. Sketch an interface out of plain characters. https://wiretext.heyitsmejosh.com
+1/ Blockframe is live. Sketch an interface out of plain characters. https://wiretext.jaybulb.com
 
 2/ A wireframe tool that draws interfaces in Unicode. Drop components on a character grid, build the layout, paste it anywhere text goes. $0.99 on the App Store, free on web.
 

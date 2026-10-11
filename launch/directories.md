@@ -6,7 +6,7 @@ Description: A wireframe tool that draws interfaces in Unicode instead of images
 
 Category: Design Tools / Developer Tools
 
-Links: https://wiretext.heyitsmejosh.com · https://apps.apple.com/app/id6794988951 · https://github.com/nulljosh/blockframe
+Links: https://wiretext.jaybulb.com · https://apps.apple.com/app/id6794988951 · https://github.com/nulljosh/blockframe
 
 Submit to: AlternativeTo, Indie Hackers products, Uneed, SaaSHub.
 

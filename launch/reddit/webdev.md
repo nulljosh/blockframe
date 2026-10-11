@@ -11,4 +11,4 @@ Built with Vite 6 and React 19, no UI libraries. Free on the web, and there's a 
 
 Open to feedback on the component set or the grid approach.
 
-wiretext.heyitsmejosh.com
+wiretext.jaybulb.com

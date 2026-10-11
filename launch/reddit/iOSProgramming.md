@@ -9,4 +9,4 @@ I rewrote it native: SwiftUI Canvas draws the grid, one Text draw per row instea
 
 It's $0.99 on the App Store, free on the web. Happy to talk through the CoreText measurement approach or the port if anyone's tackling something similar.
 
-wiretext.heyitsmejosh.com
+wiretext.jaybulb.com

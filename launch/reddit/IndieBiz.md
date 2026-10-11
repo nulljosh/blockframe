@@ -9,4 +9,4 @@ The web app stayed free. I put the native iOS and macOS app on the App Store at 
 
 Curious how other solo builders think about pricing a small utility like this. $0.99 flat felt right for the App Store, free web as the trial.
 
-wiretext.heyitsmejosh.com
+wiretext.jaybulb.com

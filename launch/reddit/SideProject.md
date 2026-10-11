@@ -11,4 +11,4 @@ Built with Vite and React, no UI libraries, plus a native SwiftUI app for iOS an
 
 Would love feedback on the component set, anything missing that you'd want to stamp down.
 
-wiretext.heyitsmejosh.com
+wiretext.jaybulb.com
