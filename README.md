@@ -13,7 +13,7 @@ Pick a component. Stamp it on a monospace grid. Copy the result as plain text. I
 ## Screenshots
 
 <p>
-<img src="screenshots/ios/en-US/01-canvas-65.png" width="300" alt="Blockframe">
+<img src="screenshots/ios/en-US/01-canvas-69.png" width="300" alt="Blockframe">
 </p>
 
 ## Run
