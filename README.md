@@ -45,7 +45,7 @@ MIT 2026 Joshua Trommel
 
 ## Live
 
-[wiretext.heyitsmejosh.com](https://wiretext.heyitsmejosh.com)
+[wiretext.jaybulb.com](https://wiretext.jaybulb.com)
 
 **Terminal:** `swift build && ./.build/debug/blockframe-tui` — see [tui/](tui/)
 
